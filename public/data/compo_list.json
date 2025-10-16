@@ -1,0 +1,10 @@
+{
+    "컴포넌트명" : [
+        {
+            "menuName": "modal",
+            "menuLink": "./components/modal.html",
+            "current": "진행중",
+            "note": ""
+        }
+    ]
+}
