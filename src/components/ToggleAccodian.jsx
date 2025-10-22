@@ -19,7 +19,7 @@ export default function ToggleList({ datas }) {
                 setActiveArray((prev) => prev.map((prevBoolean, previndex) => (previndex === index ? !prevBoolean : false)))
               }}
             >
-              {item.title}.
+              {item.title}
             </a>
             <div className={styles.toggleContents} style={{ display: activeArray[index] ? "block" : "none" }}>
               {item.content}
