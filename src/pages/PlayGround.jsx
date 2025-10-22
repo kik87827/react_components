@@ -1,4 +1,5 @@
 import ToggleList from "../components/ToggleList"
+import ToggleAccodian from "../components/ToggleAccodian"
 
 export default function PlayGround() {
   const toggleData = [
@@ -21,6 +22,10 @@ export default function PlayGround() {
   return (
     <>
       <ToggleList datas={toggleData} />
+      <br />
+      <br />
+      <br />
+      <ToggleAccodian datas={toggleData} />
     </>
   )
 }

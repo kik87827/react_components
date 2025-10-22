@@ -15,11 +15,11 @@ export default function ToggleList({ datas }) {
               onClick={(e) => {
                 e.preventDefault()
                 let copyActiveArray = [...activeArray]
-                copyActiveArray[index] = !copyActiveArray[index]
-                setActiveArray(copyActiveArray)
+                /* copyActiveArray[index] = !copyActiveArray[index] */
+                setActiveArray((prev) => prev.map((prevBoolean, previndex) => (previndex === index ? !prevBoolean : false)))
               }}
             >
-              {item.title}
+              {item.title}.
             </a>
             <div className={styles.toggleContents} style={{ display: activeArray[index] ? "block" : "none" }}>
               {item.content}
