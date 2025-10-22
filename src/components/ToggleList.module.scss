@@ -1,0 +1,46 @@
+.toggleList {
+  border-top: 1px solid #ccc;
+}
+
+.toggleItem {
+  border-bottom: 1px solid #ccc;
+}
+
+.toggleHandle {
+  display: block;
+  padding: 10px 40px 10px 10px;
+  background: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: rotate(-225deg)
+  }
+
+}
+
+.toggleHandleActive {
+  &:after {
+    transform: rotate(-45deg);
+    top: 16px;
+  }
+}
+
+.toggleContents {
+  padding: 10px;
+  display: none;
+  background: #fff;
+}
+
+.toggleContentsActive {
+  display: block;
+}
