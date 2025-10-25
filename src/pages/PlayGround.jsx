@@ -1,5 +1,6 @@
 import ToggleList from "../components/ToggleList"
 import ToggleAccodian from "../components/ToggleAccodian"
+import ModalLayer from "../components/ModalLayer"
 
 export default function PlayGround() {
   const toggleData = [
@@ -26,6 +27,10 @@ export default function PlayGround() {
       <br />
       <br />
       <ToggleAccodian datas={toggleData} />
+      <br />
+      <br />
+      <br />
+      <ModalLayer />
     </>
   )
 }
