@@ -1,8 +1,20 @@
 import ToggleList from "../components/ToggleList"
 import ToggleAccodian from "../components/ToggleAccodian"
 import ModalLayer from "../components/ModalLayer"
+import { useState } from "react";
 
 export default function PlayGround() {
+  const [modalControl,setModalControl] = useState(false);
+  const modalOptions = {
+    message : 'test message',
+    roleType : 'confirm',
+    onClose(){
+      setModalControl(false);
+    },
+    callback(){
+      console.log('callback answer')
+    }
+  }
   const toggleData = [
     {
       id: 1,
@@ -30,7 +42,7 @@ export default function PlayGround() {
       <br />
       <br />
       <br />
-      <ModalLayer />
+      <ModalLayer isOpen={modalControl} {...modalOptions} />
     </>
   )
 }
