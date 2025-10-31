@@ -1,19 +1,20 @@
 import ToggleList from "../components/ToggleList"
 import ToggleAccodian from "../components/ToggleAccodian"
 import ModalLayer from "../components/ModalLayer"
-import { useState } from "react";
+import { useState } from "react"
+import PopupLayer from "../components/PopupLayer"
 
 export default function PlayGround() {
-  const [modalControl,setModalControl] = useState(false);
+  const [modalControl, setModalControl] = useState(false)
   const modalOptions = {
-    message : 'test message',
-    roleType : 'confirm',
-    onClose(){
-      setModalControl(false);
+    message: "test message",
+    roleType: "confirm",
+    onClose() {
+      setModalControl(false)
     },
-    callback(){
-      console.log('callback answer')
-    }
+    callback() {
+      console.log("callback answer")
+    },
   }
   const toggleData = [
     {
@@ -43,6 +44,10 @@ export default function PlayGround() {
       <br />
       <br />
       <ModalLayer isOpen={modalControl} {...modalOptions} />
+      <br />
+      <br />
+      <br />
+      <PopupLayer title="팝업제목">팝업내용</PopupLayer>
     </>
   )
 }
