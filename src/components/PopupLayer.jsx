@@ -1,19 +1,31 @@
-import { useState } from "react"
 import styles from "./PopupLayer.module.scss"
 
-export default function PoppupLayer({ title, children, callback, onClose }) {
+export default function PoppupLayer({ isOpen, title, children, callback, onClose }) {
+  if (!isOpen) {
+    return null
+  }
   return (
     <>
       <div className={styles.popupLayer}>
         <div className={styles.popupItemContainer}>
-          <div className={styles.popupItemTitle}>
-            <h2 className={styles.popupTitleNode}>{title}</h2>
-          </div>
+          {title && (
+            <div className={styles.popupItemTitle}>
+              <h2 className={styles.popupTitleNode}>{title}</h2>
+            </div>
+          )}
           <div className={styles.popupItemContents}>{children}</div>
-          <button className={styles.btnPopupClose} onClick={(e)=>{
-            e.preventDefault();
-            
-          }}></button>
+          <button
+            className={styles.btnPopupClose}
+            onClick={(e) => {
+              e.preventDefault()
+              if (onClose) {
+                onClose()
+              }
+              if (callback) {
+                callback()
+              }
+            }}
+          ></button>
         </div>
       </div>
     </>

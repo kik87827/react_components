@@ -6,6 +6,7 @@ import PopupLayer from "../components/PopupLayer"
 
 export default function PlayGround() {
   const [modalControl, setModalControl] = useState(false)
+  const [popupControl, setPopupControl] = useState(true)
   const modalOptions = {
     message: "test message",
     roleType: "confirm",
@@ -14,6 +15,14 @@ export default function PlayGround() {
     },
     callback() {
       console.log("callback answer")
+    },
+  }
+  const popupOptions = {
+    onClose() {
+      setPopupControl(false)
+    },
+    callback() {
+      console.log("callback popup answer")
     },
   }
   const toggleData = [
@@ -47,7 +56,9 @@ export default function PlayGround() {
       <br />
       <br />
       <br />
-      <PopupLayer title="팝업제목">팝업내용</PopupLayer>
+      <PopupLayer isOpen={popupControl} {...popupOptions} title="팝업제목">
+        팝업내용
+      </PopupLayer>
     </>
   )
 }

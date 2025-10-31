@@ -67,8 +67,10 @@
 .app { min-width: 1280px;}
 body { margin: 0; padding: 0; font-size: 14px; font-family: 'Pretendard', Arial, 'Malgun Gothic', '맑은 고딕', dotum, sans-serif; -webkit-text-size-adjust: none;}
 img { border: 0 none; vertical-align: middle;}
+button{border:0;background:none;cursor:pointer;padding:0;font-family: 'Pretendard';}
 a { text-decoration: none; color: #333;}
 ol, ul, li { list-style: none outside none;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
 xmp { margin: 0; padding: 0; white-space: pre-wrap;}
 h1.c_left { height: 40px; margin: 24px 24px 17px 20px; color: #000; font-size: 20px; line-height: 38px;}
 h1.c_left img { height: 40px;}
@@ -98,6 +100,8 @@ p + p { margin-top: 8px;}
 .txtright { text-align: right !important;}
 .hide { display: inline-block; position: absolute; z-index: -10; width: 0 !important; height: 0 !important; overflow: hidden !important; font-size: medium; line-height: normal; word-break: break-all; opacity: 0 !important; filter: alpha(opacity=0); -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(opacity=0)';}
 .none { display: none !important;}
+
+
 .coding_guide {}
 .coding_guide h1.h1_guide { margin-bottom: 15px; padding: 12px 0 12px 10px; background: #58626f; color: white; font-size: 18px; line-height: normal;}
 .coding_guide h2.h2_guide { margin: 40px 0 10px 20px; color: #000; font-size: 16px; line-height: normal;}
@@ -189,17 +193,3 @@ p + p { margin-top: 8px;}
 .codinglist-tb tbody tr td.ing {
   color: blue;
 }
-/* .vertical-code-wrap { position: relative; overflow: hidden;}
-.vertical-code-wrap > .textarea { background: #f3f4f5; border: 0; border-top: 5px solid #e7e8e9; padding: 40px 30px 25px; width: 100%; box-sizing: border-box; resize: none;}
-.btn-copyitem { display: block; width: 35px; height: 35px; background: #fff url('../images/btn_copy.svg') no-repeat 50% 50%/15px auto; position: absolute; top: 0; right: 0; box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.1);}
-.btn-copyitem.active { background-image: url('../images/btn_copy_active.svg');}
-.middle-gate-wrap {}
-.middle-gate-list { display: flex; gap: 20px;}
-.middle-gate-list > li {}
-.gate-menu { font-size: 20px; font-weight: bold;}
-.component { margin-bottom: 40px;}
-.code-block { position: relative; display: inline-block; width: 100%;}
-.copy-btn { position: absolute; top: 10px; right: 10px; background: #444; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 12px; border-radius: 5px;}
-.source-title { font-weight: 700; margin-bottom: 5px;}
-.source-wrap { color: #777; line-height: 1.4;}
- */
