@@ -1,8 +1,15 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function CodingList() {
-  let [categoryData, setCategoryData] = useState(["매장안내", "상품상세", "타미힐피거"])
+  let [codingData, setCodingData] = useState(null)
   let [categoryActive, setCategoryActive] = useState(0)
+
+  useEffect(() => {
+    fetch("/data/coding_list.json")
+      .then((result) => result.json())
+      .then((json) => setCodingData(json))
+      .catch((error) => console.error("JSON 불러오기 실패 : ", error))
+  }, [])
   return (
     <section className="middle-wrap">
       <div className="middle-templete">
@@ -10,21 +17,20 @@ export default function CodingList() {
           <div className="middle-left-item">
             <div className="left-block">
               <ul className="middle-menu-list">
-                {categoryData.map((item, idx) => {
-                  return (
-                    <li>
+                {codingData &&
+                  Object.keys(codingData).map((keyItem, idx) => (
+                    <li key={keyItem}>
                       <a
-                        href="javascript:;"
+                        href="#"
                         className={["middle-menu", categoryActive === idx ? "active" : ""].filter(Boolean).join(" ")}
                         onClick={() => {
                           setCategoryActive(idx)
                         }}
                       >
-                        {item}
+                        {keyItem}
                       </a>
                     </li>
-                  )
-                })}
+                  ))}
               </ul>
             </div>
           </div>

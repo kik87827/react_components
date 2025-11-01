@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
-import CodingList from "./pages/Codinglist"
-import PlayGround from "./pages/PlayGround"
+import CodingList from "./pages/CodingList/CodingList"
+import PlayGround from "./pages/PlayGround/PlayGround"
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <nav className="nav-wrap">
               <ul className="nav-list">
                 <li>
-                  <a href="index.html" className="nav-item">
+                  <a href="/" className="nav-item">
                     PUBLISING LIST
                   </a>
                 </li>

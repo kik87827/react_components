@@ -1,0 +1,44 @@
+{
+  "매장안내": [
+    {
+      "menuName": "매장 리스트",
+      "menuLink": "./BranchPage/BranchList",
+      "current": "진행중",
+      "note": ""
+    },
+    {
+      "menuName": "매장 뷰",
+      "menuLink": "./BranchPage/BranchView",
+      "current": "진행중",
+      "note": ""
+    }
+  ],
+  "상품상세": [
+    {
+      "menuName": "상품 리스트",
+      "menuLink": "./ProductPage/ProductList",
+      "current": "완료",
+      "note": ""
+    },
+    {
+      "menuName": "상품 뷰",
+      "menuLink": "./ProductPage/ProductView",
+      "current": "대기",
+      "note": ""
+    }
+  ],
+  "타미힐피거": [
+    {
+      "menuName": "타미힐피거 리스트",
+      "menuLink": "./TommyPage/TommyList",
+      "current": "완료",
+      "note": ""
+    },
+    {
+      "menuName": "타미힐피거 뷰",
+      "menuLink": "./TommyPage/TommyView",
+      "current": "대기",
+      "note": ""
+    }
+  ]
+}

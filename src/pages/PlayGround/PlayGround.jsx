@@ -1,12 +1,12 @@
-import ToggleList from "../components/ToggleList"
-import ToggleAccodian from "../components/ToggleAccodian"
-import ModalLayer from "../components/ModalLayer"
+import ToggleList from "../../components/ToggleList/ToggleList"
+import ToggleAccodian from "../../components/ToggleList/ToggleAccodian"
+import ModalLayer from "../../components/ModalLayer/ModalLayer"
 import { useState } from "react"
-import PopupLayer from "../components/PopupLayer"
+import PopupLayer from "../../components/PopupLayer/PopupLayer"
 
 export default function PlayGround() {
   const [modalControl, setModalControl] = useState(false)
-  const [popupControl, setPopupControl] = useState(true)
+  const [popupControl, setPopupControl] = useState(false)
   const modalOptions = {
     message: "test message",
     roleType: "confirm",
