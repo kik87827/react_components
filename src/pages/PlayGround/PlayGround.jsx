@@ -3,6 +3,7 @@ import ToggleAccodian from "../../components/ToggleList/ToggleAccodian"
 import ModalLayer from "../../components/ModalLayer/ModalLayer"
 import { useState } from "react"
 import PopupLayer from "../../components/PopupLayer/PopupLayer"
+import ComboBox from "../../components/ComboBox/ComboBox"
 
 export default function PlayGround() {
   const [modalControl, setModalControl] = useState(false)
@@ -42,6 +43,14 @@ export default function PlayGround() {
       content: <p>토글아이템 컨텐츠 컨텐츠 컨텐츠 컨텐츠 컨텐츠3</p>,
     },
   ]
+  const comboData = [
+    { value: "apple", label: "사과" },
+    { value: "banana", label: "바나나" },
+    { value: "orange", label: "오렌지" },
+  ]
+  const handleSelect = (item) => {
+    console.log("선택된 값:", item)
+  }
   return (
     <>
       <ToggleList datas={toggleData} />
@@ -53,6 +62,10 @@ export default function PlayGround() {
       <br />
       <br />
       <ModalLayer isOpen={modalControl} {...modalOptions} />
+      <br />
+      <br />
+      <br />
+      <ComboBox options={comboData} onSelect={handleSelect} />
       <br />
       <br />
       <br />
