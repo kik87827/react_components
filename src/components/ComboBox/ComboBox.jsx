@@ -22,9 +22,13 @@ export default function ComboBox({ options = [], onSelect }) {
   // 외부 클릭 닫기
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (boxRef.current && !boxRef.current.contains(e.target)) {
-        setIsOpen(false)
+      // 콤보박스 버튼이나 옵션 레이어 내부를 클릭했으면 무시
+      if (e.target.matches(`.${styles.comboBoxTarget}, .${styles.optionLayer}, .${styles.optionLayer} *`)) {
+        return
       }
+
+      // 그 외 영역 클릭 시 닫기
+      setIsOpen(false)
     }
     document.addEventListener("mousedown", handleClickOutside)
 
