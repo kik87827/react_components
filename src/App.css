@@ -172,6 +172,7 @@ p + p { margin-top: 8px;}
 .middle-right-title-count { margin-top: 5px; font-size: 16px;}
 .vertical-cont-item-wrap {}
 .vertical-cont-item { margin-bottom: 50px;}
+.vertical-cont-item.hidden{display:none;}
 .vertical-cont-item:last-of-type { margin-bottom: 0;}
 .vertical-cont-title-wrap { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px;}
 .vertical-cont-title-wrap .vertical-cont-title { margin-bottom: 0;}
