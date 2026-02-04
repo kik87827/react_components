@@ -1,9 +1,12 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation, useParams } from "react-router-dom"
 import "./App.css"
 import CodingList from "./pages/CodingList/CodingList"
 import PlayGround from "./pages/PlayGround/PlayGround"
 
 function App() {
+  const location = useLocation()
+  const titleText = location.pathname === "/" ? "코딩리스트" : "컨포넌트"
+  console.log()
   return (
     <div className="App">
       <header className="header-wrap">
@@ -11,7 +14,7 @@ function App() {
           <h1 className="toplogo">
             <a href="#" className="toplogo-link">
               <span className="toplogo-node">React</span>
-              <span className="toplogo-text">컴포넌트</span>
+              <span className="toplogo-text">{titleText}</span>
             </a>
           </h1>
           <div className="header-main-cols">
